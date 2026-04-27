@@ -1,27 +1,44 @@
 {
+  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "lib": ["ES2020"],
-    "types": ["node"],
+    // File Layout
+    // "rootDir": "./src",
+    // "outDir": "./dist",
 
-    "rootDir": "./src",
-    "outDir": "./dist",
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "module": "nodenext",
+    "target": "esnext",
+    "types": [],
+    // For nodejs:
+    // "lib": ["esnext"],
+    // "types": ["node"],
+    // and npm install -D @types/node
 
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
 
-    "strict": true,
+    // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
 
-    "sourceMap": true,
-    "declaration": false,
-    "removeComments": true,
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
 
-    "skipLibCheck": true
-  },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+  }
 }
